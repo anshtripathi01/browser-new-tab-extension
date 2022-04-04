@@ -11,7 +11,7 @@ export const Quotes = ({ fullName, greet }) => {
       .then((res) => res.json())
       .then((data) => setQuotes(data[random].text))
       .catch((err) => console.log(err));
-  }, []);
+  },[random]);
   const yourThoughts = (e) => {
     if (e.key === "Enter") {
       setThoughts(e.target.value);
