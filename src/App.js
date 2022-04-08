@@ -1,7 +1,7 @@
 import { useState } from "react";
+import "./styles.css";
 import Greeting from "./Components/Greeting";
 import { Quotes } from "./Components/Quotes";
-import "./styles.css";
 import User from "./Components/User";
 import Weather from "./Components/Weather";
 
@@ -17,12 +17,10 @@ export default function App() {
   return (
     <div className="App">
       <User fullName={fullName} setFullName={setFullName} />
-      {fullName !== "" && <Weather />}
-      {fullName !== "" && <h1>{time}</h1>}
-      {fullName !== "" && (
+      {fullName !== "" && <> <Weather />
+        <h1>{time}</h1>
         <Greeting greet={greet} setGreet={setGreet} fullName={fullName} />
-      )}
-      {fullName !== "" && <Quotes />}
+        <Quotes /> </>}
     </div>
   );
 }

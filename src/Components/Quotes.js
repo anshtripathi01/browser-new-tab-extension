@@ -11,7 +11,9 @@ export const Quotes = ({ fullName, greet }) => {
       .then((res) => res.json())
       .then((data) => setQuotes(data[random].text))
       .catch((err) => console.log(err));
-  },[random]);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
+
   const yourThoughts = (e) => {
     if (e.key === "Enter") {
       setThoughts(e.target.value);
@@ -20,8 +22,8 @@ export const Quotes = ({ fullName, greet }) => {
 
   return (
     <div>
-      {!thoughts && <h3>What is is your main thoughts Today?</h3>}
-      {!thoughts && <input onKeyDown={yourThoughts} type="text" />}
+      {!thoughts && <> <h3>What is is your main thoughts Today?</h3>
+       <input onKeyDown={yourThoughts} type="text" /> </>}
       <p className="quotes">"{quotes}"</p>
 
       {thoughts && (

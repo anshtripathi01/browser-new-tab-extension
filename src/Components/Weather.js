@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const Weather = () => {
   const [latitude, setLatitude] = useState();
   const [longitude, setLongitude] = useState();
-  // const [location, setLocation] = useState("");
   const [weather, setWeather] = useState({
     temp: "",
     icon: "",
@@ -16,17 +15,18 @@ const Weather = () => {
       setLongitude(position.coords.longitude);
     });
 
-
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather/?lat=${latitude}&lon=${longitude}&units=metric&APPID=4236d7f622034251d8d52afac54a439b`
+      `${process.env.REACT_APP_API_URL}/weather/?lat=${latitude}&lon=${longitude}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => {
         return res.json();
       })
       .then((data) => {
+        console.log();
         setWeather({
+
           temp: data.main.temp,
-          icon: data.weather[3].icon,
+          icon: data.weather[0].icon,
           location: data.name
         })
       })
@@ -38,8 +38,8 @@ const Weather = () => {
 
   return (
 
-    <div>
-      <img src={`https://openweathermap.org/img/w/${weather.icon}`} alt="weather-icon" />
+    <div className="weather-container">
+      <img src={`${process.env.REACT_APP_ICON_URL}/${weather.icon}.png`} alt="weather-icon" />
       <h3>{Math.round(weather.temp)} &deg;c</h3>
       <p>{weather.location}</p>
     </div>

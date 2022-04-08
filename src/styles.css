@@ -14,11 +14,16 @@ body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.45),
       rgba(0, 0, 0, 0.45)),
-
     url("https://source.unsplash.com/2220x1024/?nature");
 }
 
-
+h2 {
+  font-family: 'Ubuntu', sans-serif;
+}
+p {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+}
 
 input {
   padding: 8px;
@@ -30,19 +35,10 @@ input {
 
 }
 
-p {
-  font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-h2 {
-  font-family: 'Ubuntu', sans-serif;
-}
-
 .quotes {
   font-size: 1.1rem;
   position: fixed;
-  bottom: 0;
+  bottom: 0.8rem;
   color: skyblue;
   font-weight: bold;
   letter-spacing: 0.2rem;
@@ -57,7 +53,25 @@ button {
   font-size: 1rem;
   font-weight: bolder;
 }
-
+.weather-container{
+  margin-left: auto;
+  margin-right: 2rem;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  width: 4.5rem;
+  padding: 0 1.2rem 2.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #FDB813;
+}
+.weather-container h3, p{
+  font-size: 0.8rem;
+  font-weight: bolder;
+  margin: 0.1rem;
+  color: green;
+}
+.weather-container h3{
+  font-size: 1.2rem;
+}
 input[type="checkbox"] {
   display: inline-block;
   height: 20px;
