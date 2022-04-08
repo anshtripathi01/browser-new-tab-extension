@@ -21,7 +21,6 @@ h2 {
   font-family: 'Ubuntu', sans-serif;
 }
 p {
-  font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -48,6 +47,7 @@ button {
   border-color: skyblue;
   border-radius: 0.2rem;
   margin-top: 10px;
+  margin-left: 5px;
   padding: 6px;
   background-color: skyblue;
   font-size: 1rem;

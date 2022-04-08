@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../styles.css"
 
 const User = ({ fullName, setFullName }) => {
   const [name, setName] = useState("");
@@ -27,7 +28,8 @@ const User = ({ fullName, setFullName }) => {
 
   return (
     <div>
-      {fullName === "" && <><p>Please type your name 😊</p>
+      {fullName === "" && <>
+      <p style={{ fontSize: "1.2rem", color:"#fff" }}>Please type your name 😊</p>
         <input onChange={userInput} />
         <button onClick={submitHandler}> Continue </button></>}
       <p style={{ color: "red" }}>{error}</p>
