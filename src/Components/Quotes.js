@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 export const Quotes = ({ fullName, greet }) => {
   const [thoughts, setThoughts] = useState("");
   const [quotes, setQuotes] = useState("");
+  const [check,setCheck] = useState("checked")
   const api = "https://type.fit/api/quotes";
 
   const random = Math.floor(Math.random() * 10 + 1);
@@ -15,23 +16,27 @@ export const Quotes = ({ fullName, greet }) => {
   },[]);
 
   const yourThoughts = (e) => {
-    if (e.key === "Enter") {
-      setThoughts(e.target.value);
-    }
+    setTimeout(()=>{
+      if (e.key === "Enter") {
+        setThoughts(e.target.value);
+        setCheck("")
+      }
+      else{
+        setCheck("checked")
+      }
+    },1000)
+    
   };
 
   return (
     <div>
-      {!thoughts && <> <h3>What is is your main thoughts Today?</h3>
-       <input onKeyDown={yourThoughts} type="text" /> </>}
-      <p className="quotes">"{quotes}"</p>
-
-      {thoughts && (
-        <p>
-          <input type="checkBox" />
-          {thoughts}...
-        </p>
-      )}
+      { check ==="checked" ? <> <h2>What is is your main thoughts Today?</h2>
+       <input onKeyDown={yourThoughts} type="text" /> </>:<>
+        <h2>
+          <input type="checkBox" onClick={yourThoughts} />
+           {thoughts}... 
+        </h2></>}
+    <p className="quotes">"{quotes}"</p>
     </div>
   );
 };

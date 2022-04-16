@@ -29,7 +29,7 @@ const User = ({ fullName, setFullName }) => {
   return (
     <div>
       {fullName === "" && <>
-      <p style={{ fontSize: "1.2rem", color:"#fff" }}>Please type your name 😊</p>
+      <h1> Please type your name 😊</h1>
         <input onChange={userInput} />
         <button onClick={submitHandler}> Continue </button></>}
       <p style={{ color: "red" }}>{error}</p>

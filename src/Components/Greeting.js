@@ -7,9 +7,9 @@ const Greeting = ({ greet, setGreet, fullName }) => {
     setGreet("Good Night");
   }
   return (
-    <h2>
+    <h1>
       {greet} , {fullName}
-    </h2>
+    </h1>
   );
 };
 export default Greeting;
