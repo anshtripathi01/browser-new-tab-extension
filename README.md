@@ -9,8 +9,11 @@ Apna Focus is a Browser Extension. It activated when you click on a new tab .
 - Get a Random Wallpaper and Quotes on every refresh
 
 ## Click below for Demo
-
 (https://apna-focus.netlify.app/)
+
+## Click below for Installation
+(https://addons.mozilla.org/en-US/firefox/addon/ansh-tripathi/)
+
 # Screens
 ## OnBording
 ![onboard](https://user-images.githubusercontent.com/46096778/163692617-1af2eb46-28a8-43b6-bfae-31cba960ac6e.jpg)
