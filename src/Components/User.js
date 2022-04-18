@@ -28,6 +28,9 @@ const User = ({ fullName, setFullName }) => {
 
   return (
     <div>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/ansh-tripathi/" target="_blank">
+    <button>Add To Firefox</button>
+    </a>
       {fullName === "" && <>
       <h1> Please type your name 😊</h1>
         <input onChange={userInput} />
