@@ -28,7 +28,7 @@ const User = ({ fullName, setFullName }) => {
 
   return (
     <div>
-    <a href="https://addons.mozilla.org/en-US/firefox/addon/ansh-tripathi/" target="_blank">
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/ansh-tripathi/">
     <button>Add To Firefox</button>
     </a>
       {fullName === "" && <>
